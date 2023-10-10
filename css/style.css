@@ -489,7 +489,7 @@ body.light hr.separator {
 }
 
 .home .bg {
-  background-image: "img/workprofilepic2.jpg";
+  background-image: url(workprofilepic2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
