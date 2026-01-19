@@ -1,0 +1,256 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  scrollbar-gutter: stable; /* Prevent layout shift when scrollbar appears */
+  overflow-y: scroll; /* Always reserve space for scrollbar */
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  padding-top: 0; /* Navbar will be fixed on top */
+}
+
+/* Crypto fonts for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+}
+
+/* Audiowide for navbar and important elements */
+nav,
+.navbar-text,
+button,
+a.navbar-link {
+  font-family: "Audiowide", sans-serif;
+}
+
+nav a {
+  font-family: "Audiowide", sans-serif;
+}
+
+/* Animation for fade-in-up effect */
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+/* Delay for sequential animations */
+.animate-fade-in-up.delay-200 {
+  animation-delay: 0.2s;
+}
+.animate-fade-in-up.delay-400 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Crypto Ticker - Positioned at very top */
+#cryptoTicker {
+  width: 100%;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    180deg,
+    rgba(3, 7, 18, 0.95) 0%,
+    rgba(17, 24, 39, 0.9) 100%
+  );
+}
+
+/* Navbar styling - positioned below ticker in normal flow */
+nav {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Add padding to main content to account for fixed navbar */
+body > *:not(nav):not(#cryptoTicker):not(footer) {
+  margin-top: 0;
+}
+
+/* Ensure sections start below navbar */
+section {
+  scroll-margin-top: 150px; /* Account for navbar + ticker when scrolling to anchors */
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 100px;
+  }
+}
+
+/* Crypto Ticker Styling */
+.ticker-item {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(59, 130, 246, 0.05) 100%
+  );
+  border-radius: 0.5rem;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+.ticker-item:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.2) 0%,
+    rgba(59, 130, 246, 0.1) 100%
+  );
+  border-color: rgba(139, 92, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.ticker-symbol {
+  font-weight: 600;
+  color: #a78bfa;
+  font-size: 0.875rem;
+}
+
+.ticker-price {
+  color: #e5e7eb;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.ticker-change {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.ticker-change.positive {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.ticker-change.negative {
+  color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.ticker-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Purple glow effect for teaching cards */
+.teaching-card {
+  transition: all 0.3s ease;
+}
+
+.teaching-card:hover {
+  box-shadow:
+    0 0 30px rgba(168, 85, 247, 0.5),
+    0 0 60px rgba(168, 85, 247, 0.3);
+  transform: scale(1.05);
+}
+
+/* Select dropdown styling */
+select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.25rem;
+  padding-right: 2.5rem;
+  color: white;
+}
+
+select option {
+  background-color: #374151;
+  color: white;
+  padding: 0.5rem;
+}
+
+select option:checked {
+  background: linear-gradient(#a855f7, #a855f7);
+  background-color: #a855f7;
+  color: white;
+}
+
+/* Payment preference select styling */
+#paymentPreference {
+  color: white !important;
+  background-color: #4b5563;
+}
+
+#paymentPreference option {
+  background-color: #1f2937 !important;
+  color: white !important;
+  padding: 0.5rem;
+}
+
+#paymentPreference option:disabled {
+  color: #ffffff !important;
+  background-color: #1f2937 !important;
+}
+
+#paymentPreference option[disabled][selected] {
+  color: #ffffff !important;
+}
+
+#paymentPreference option:checked {
+  background: linear-gradient(#a855f7, #a855f7) !important;
+  background-color: #a855f7 !important;
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .animate-ticker {
+    animation-duration: 30s;
+    gap: 1rem;
+  }
+
+  .ticker-item {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .ticker-symbol,
+  .ticker-price,
+  .ticker-change {
+    font-size: 0.75rem;
+  }
+}
+
+/* @media (max-width: 767px) {
+  nav .space-x-6 a {
+    font-size: 0.9rem;
+  }
+} */
