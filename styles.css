@@ -249,6 +249,20 @@ select option:checked {
   }
 }
 
+/* Scroll to Top Button */
+#scrollToTopBtn {
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollToTopBtn:hover {
+  transform: translateY(-3px);
+}
+
 /* @media (max-width: 767px) {
   nav .space-x-6 a {
     font-size: 0.9rem;
