@@ -251,7 +251,10 @@ select option:checked {
 
 /* Scroll to Top Button */
 #scrollToTopBtn {
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
 }
 
 #scrollToTopBtn.show {
@@ -261,6 +264,23 @@ select option:checked {
 
 #scrollToTopBtn:hover {
   transform: translateY(-3px);
+}
+
+/* Mobile Menu Modal */
+.mobile-menu-modal {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.mobile-menu-modal.show {
+  max-height: 500px;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-modal {
+    display: none !important;
+  }
 }
 
 /* @media (max-width: 767px) {

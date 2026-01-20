@@ -107,44 +107,45 @@
             />
           </svg>
         </button>
-
-        <!-- Mobile Dropdown Menu (initially hidden, visible only on screens < md) -->
-      <div
-        id="mobile-menu"
-        class="w-full md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-md shadow-xl z-40 hidden mt-4"
-      >
-        <a
-          href="#home"
-          class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150 border-t border-gray-700"
-          onclick="handleMobileLinkClick(event)"
-          >Home</a
-        >
-        <a
-          href="#bitcoin-legacy"
-          class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150"
-          onclick="handleMobileLinkClick(event)"
-          >Bitcoin Legacy</a
-        >
-        <a
-          href="#what-is-defi"
-          class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150"
-          onclick="handleMobileLinkClick(event)"
-          >Decentralization</a
-        >
-        <a
-          href="#what-i-teach"
-          class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150"
-          onclick="handleMobileLinkClick(event)"
-          >What I Teach</a
-        >
-        <a
-          href="#contact"
-          class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150 border-b border-gray-700"
-          onclick="handleMobileLinkClick(event)"
-          >Contact</a
-        >
       </div>
     </nav>
+
+    <!-- Mobile Dropdown Menu (popup modal outside navbar) -->
+    <div
+      id="mobile-menu"
+      class="w-full md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-md shadow-xl z-40 mobile-menu-modal"
+    >
+      <a
+        href="#home"
+        class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150 border-t border-gray-700"
+        onclick="handleMobileLinkClick(event)"
+        >Home</a
+      >
+      <a
+        href="#bitcoin-legacy"
+        class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150"
+        onclick="handleMobileLinkClick(event)"
+        >Bitcoin Legacy</a
+      >
+      <a
+        href="#what-is-defi"
+        class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150"
+        onclick="handleMobileLinkClick(event)"
+        >Decentralization</a
+      >
+      <a
+        href="#what-i-teach"
+        class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150"
+        onclick="handleMobileLinkClick(event)"
+        >What I Teach</a
+      >
+      <a
+        href="#contact"
+        class="block py-3 px-6 text-lg text-gray-300 hover:text-white hover:bg-gray-700 transition duration-150 border-b border-gray-700"
+        onclick="handleMobileLinkClick(event)"
+        >Contact</a
+      >
+    </div>
     <!-- Home Section -->
     <section
       id="home"
