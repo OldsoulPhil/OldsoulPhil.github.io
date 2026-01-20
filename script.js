@@ -199,7 +199,7 @@ function toggleMenu() {
   const openIcon = document.getElementById("open-icon");
   const closeIcon = document.getElementById("close-icon");
 
-  menu.classList.toggle("hidden");
+  menu.classList.toggle("show");
   openIcon.classList.toggle("hidden");
   closeIcon.classList.toggle("hidden");
 }
@@ -210,8 +210,8 @@ function closeMenu() {
   const closeIcon = document.getElementById("close-icon");
 
   // Only hide if visible
-  if (!menu.classList.contains("hidden")) {
-    menu.classList.add("hidden");
+  if (menu.classList.contains("show")) {
+    menu.classList.remove("show");
     openIcon.classList.remove("hidden");
     closeIcon.classList.add("hidden");
   }
