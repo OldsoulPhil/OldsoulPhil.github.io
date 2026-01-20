@@ -283,6 +283,27 @@ select option:checked {
   }
 }
 
+/* Bitcoin Legacy Section - Gradient Shadows */
+.bitcoin-card {
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.3), 0 0 60px rgba(168, 85, 247, 0.2);
+}
+
+.bitcoin-card:hover {
+  box-shadow: 0 0 40px rgba(249, 115, 22, 0.5), 0 0 80px rgba(168, 85, 247, 0.3);
+}
+
+.defi-card {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.3), 0 0 60px rgba(59, 130, 246, 0.2);
+}
+
+.defi-card:hover {
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.5), 0 0 80px rgba(59, 130, 246, 0.3);
+}
+
+.insight-box {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), 0 0 60px rgba(249, 115, 22, 0.2);
+}
+
 /* @media (max-width: 767px) {
   nav .space-x-6 a {
     font-size: 0.9rem;
