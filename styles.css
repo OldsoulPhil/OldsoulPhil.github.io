@@ -304,6 +304,183 @@ select option:checked {
   box-shadow: 0 0 30px rgba(168, 85, 247, 0.4), 0 0 60px rgba(249, 115, 22, 0.2);
 }
 
+/* DeFi Section - Dynamic Card Animations */
+.defi-principle-card,
+.defi-mechanism-card,
+.defi-advantage-card {
+  transition: all 0.4s ease;
+  animation: cardFloat 3s ease-in-out infinite;
+}
+
+.defi-principle-card {
+  animation-delay: 0s;
+}
+
+.defi-mechanism-card {
+  animation-delay: 0.5s;
+}
+
+.defi-advantage-card {
+  animation-delay: 1s;
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.defi-principle-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 35px rgba(34, 211, 238, 0.4), 0 0 70px rgba(59, 130, 246, 0.2);
+}
+
+.defi-mechanism-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.4), 0 0 70px rgba(236, 72, 153, 0.2);
+}
+
+.defi-advantage-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 0 35px rgba(34, 197, 94, 0.4), 0 0 70px rgba(16, 185, 129, 0.2);
+}
+
+.defi-insight-box {
+  animation: pulseGlow 3s ease-in-out infinite;
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.3), 0 0 60px rgba(168, 85, 247, 0.2);
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.3), 0 0 60px rgba(168, 85, 247, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(34, 211, 238, 0.5), 0 0 80px rgba(168, 85, 247, 0.4);
+  }
+}
+
+/* Teaching Cards - Dynamic Animations */
+.teaching-card {
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Staggered floating animation for each card */
+.teach-card-1 {
+  animation: floatCard1 4s ease-in-out infinite;
+}
+
+.teach-card-2 {
+  animation: floatCard2 4.5s ease-in-out infinite;
+}
+
+.teach-card-3 {
+  animation: floatCard3 5s ease-in-out infinite;
+}
+
+.teach-card-4 {
+  animation: floatCard4 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.teach-card-5 {
+  animation: floatCard5 4.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.teach-card-6 {
+  animation: floatCard6 5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes floatCard1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatCard2 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatCard3 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatCard4 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes floatCard5 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes floatCard6 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Hover effects with glow */
+.teaching-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(168, 85, 247, 0.3);
+}
+
+.teach-card-1:hover {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(139, 92, 246, 0.05));
+}
+
+.teach-card-2:hover {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(219, 39, 119, 0.05));
+}
+
+.teach-card-3:hover {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.05));
+}
+
+.teach-card-4:hover {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(6, 182, 212, 0.05));
+}
+
+.teach-card-5:hover {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.1), rgba(249, 115, 22, 0.05));
+}
+
+.teach-card-6:hover {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(37, 99, 235, 0.05));
+}
+
 /* @media (max-width: 767px) {
   nav .space-x-6 a {
     font-size: 0.9rem;
